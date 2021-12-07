@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Crop Yeild</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-light" style="background-color: #E5FFE5;">
+            <nav class="navbar navbar-expand-lg navbar-light mx-auto" >
+            <a class="navbar-brand" href="#">Crop Yeild prediction</a>
+            </nav>
+        </nav>
+        <div  class="container has-bg-img">
+        <img  class="padding" src="{{ url_for('static',filename ='images/crop.jpg') }}" class="cover" width="100%" height="">
+            <div class="row " >
+                <div class="col-md-6 offset-md-3">
+                    <form action="{{ url_for('predict') }}" method="POST" >
+                    <div class="mb-3">
+<br>
+                    <input type="text" class="form-control" name="district" id="exampleInputEmail1" placeholder="District"><br>
+                    <input type="text" class="form-control" name="season" id="exampleInputEmail2" placeholder="Season"><br>
+                    <input type="text" class="form-control" name="cropname" id="exampleInputEmail3" placeholder="Crop name"><br>
+                    <input type="text" class="form-control" name="area" id="exampleInputEmail4" placeholder="Area"><br>
+
+                    <button type="submit" class="btn btn-success" onclick="">Submit</button><br><br><br>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div  class="container">
+            <div class ="row">
+
+                <div class="col-xs-2 offset-5" >
+                    <h3>Project is done by</h3>
+                 <ul>
+
+                    <li> Aishwarya</li>
+                    <li> Rohith Reddy</li>
+                    <li> Deekshitha</li>
+                    <li> Manideep</li>
+                 </ul>
+                 </div>
+            </div>
+
+        </div>
+
+    </body>
+</html>
